@@ -4,19 +4,21 @@ import Register from "./pages/Register";
 import Profile from "./pages/Profile";
 import Tasks from "./pages/Tasks";
 import TaskDetails from "./pages/TaskDetails";
+import SnakeGame from './pages/SnakeGame';
+import Home from "./pages/Home";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
-
       <div className="p-6">
         <Routes>
-          <Route path="/" element={<h1 className="text-2xl">Welcome!</h1>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/tasks" element={<Tasks />} />
           <Route path="/tasks/:id" element={<TaskDetails />} />
+          <Route path="/tasks/:id/snake" element={<SnakeGame />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { createUser } from "../api/users";
 
 export default function Register() {
   const [form, setForm] = useState({
@@ -7,13 +8,22 @@ export default function Register() {
     password: ""
   });
 
+  const [message, setMessage] = useState("");
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Register user:", form);
+
+    try {
+      const user = await createUser(form);
+      setMessage(`User created! ID: ${user.id}`);
+    } catch (err) {
+      setMessage("Error creating user.");
+      console.error(err);
+    }
   };
 
   return (
@@ -43,6 +53,8 @@ export default function Register() {
 
         <button className="bg-blue-500 text-white p-2">Register</button>
       </form>
+
+      {message && <p className="mt-4">{message}</p>}
     </div>
   );
 }
