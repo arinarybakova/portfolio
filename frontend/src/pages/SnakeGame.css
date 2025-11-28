@@ -1,0 +1,157 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.snake-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #7ec850;
+}
+
+.game-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+  margin-top: 30px;
+}
+
+.game-content canvas {
+  display: block;
+  max-width: 90vw;
+  height: auto;
+}
+
+/* Position the score box */
+.score {
+  position: absolute;
+  right: 220px;            /* distance from the right edge */
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: rgba(255, 255, 255, 0.8);  /* tropical white glass */
+  padding: 20px 28px;
+  border-radius: 16px;
+  border: 3px solid #2e7d32;             /* deep jungle green */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+
+  font-family: "Trebuchet MS", sans-serif;
+  color: #1b5e20;
+  font-size: 24px;
+  font-weight: bold;
+
+  backdrop-filter: blur(4px);
+}
+
+/* Optional tropical leaf edge on the right side */
+.score::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 40px;
+  background: #43a047;
+  border-radius: 0 20px 20px 0;
+}
+.snake-wrapper {
+  position: relative;
+}
+
+.instructions {
+  position: absolute;
+  left: 40px;           /* stay on the left */
+  top: 50%;
+  transform: translateY(-50%);
+  
+  display: flex;
+  flex-direction: column;  /* stack h2, ul, and dropdown vertically */
+  align-items: flex-start; /* left-align content inside box */
+
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px 28px;
+  border-radius: 16px;
+  border: 3px solid #2e7d32;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+
+  font-family: "Trebuchet MS", sans-serif;
+  color: #1b5e20;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: bold;
+
+  backdrop-filter: blur(4px);
+}
+
+/* Optional tropical leaf accent */
+.instructions::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-12deg);
+  width: 20px;
+  height: 40px;
+  background: #43a047;
+  border-radius: 0 20px 20px 0;
+}
+
+.theme {
+  margin-bottom: 16px; /* spacing between dropdown and title */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  left: 20px; /* adjust position to align with score box */
+  bottom: 20px;
+  
+}
+
+.theme label {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.theme select {
+  padding: 6px 12px;
+  border-radius: 12px;
+  border: 2px solid #2e7d32;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  color: #1b5e20;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.theme select:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.theme select:focus {
+  border-color: #43a047;
+  box-shadow: 0 0 8px #43a047;
+}
+
+.flower {
+  position: absolute;
+  left: 550px; /* right outside canvas */
+  top: 50px;
+  font-size: 48px;
+}

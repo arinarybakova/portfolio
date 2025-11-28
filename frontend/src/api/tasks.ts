@@ -1,5 +1,5 @@
 // frontend/src/api/tasks.ts
-import { API_URL, api } from "./client"; // see below for client.ts
+import { api } from "./client"; // see below for client.ts
 
 export interface Task {
   id: number;

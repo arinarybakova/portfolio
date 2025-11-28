@@ -17,8 +17,8 @@ export default function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/tasks" element={<Tasks />} />
-          <Route path="/tasks/:id" element={<TaskDetails />} />
-          <Route path="/tasks/:id/snake" element={<SnakeGame />} />
+          <Route path="/tasks/:taskId" element={<TaskDetails />} />
+          <Route path="/tasks/:taskId/snake" element={<SnakeGame />} />
         </Routes>
       </div>
     </BrowserRouter>
