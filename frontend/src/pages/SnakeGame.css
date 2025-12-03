@@ -6,10 +6,12 @@ html, body {
 
 .snake-wrapper {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  place-items: center;
+  width: 160%;
+  height: 100vh;           /* full viewport height */
+  display: flex;            /* use flex for centering */
+  flex-direction: column;
+  align-items: center;      /* center horizontally */
+  justify-content: center;  /* center vertically */
   background: #7ec850;
 }
 
@@ -26,7 +28,7 @@ html, body {
   font-weight: bold;
   margin-bottom: 15px;
   color: white;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .game-content canvas {
@@ -35,28 +37,24 @@ html, body {
   height: auto;
 }
 
-/* Position the score box */
+/* Score box */
 .score {
   position: absolute;
-  right: 220px;            /* distance from the right edge */
+  right: 220px; /* distance from right edge */
   top: 50%;
   transform: translateY(-50%);
-
-  background: rgba(255, 255, 255, 0.8);  /* tropical white glass */
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px 28px;
   border-radius: 16px;
-  border: 3px solid #2e7d32;             /* deep jungle green */
+  border: 3px solid #2e7d32;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-
   font-family: "Trebuchet MS", sans-serif;
   color: #1b5e20;
   font-size: 24px;
   font-weight: bold;
-
   backdrop-filter: blur(4px);
 }
 
-/* Optional tropical leaf edge on the right side */
 .score::before {
   content: "";
   position: absolute;
@@ -68,36 +66,29 @@ html, body {
   background: #43a047;
   border-radius: 0 20px 20px 0;
 }
-.snake-wrapper {
-  position: relative;
-}
 
+/* Instructions box */
 .instructions {
   position: absolute;
-  left: 40px;           /* stay on the left */
+  left: 40px;
   top: 50%;
   transform: translateY(-50%);
-  
   display: flex;
-  flex-direction: column;  /* stack h2, ul, and dropdown vertically */
-  align-items: flex-start; /* left-align content inside box */
-
+  flex-direction: column;
+  align-items: flex-start;
   background: rgba(255, 255, 255, 0.85);
   padding: 20px 28px;
   border-radius: 16px;
   border: 3px solid #2e7d32;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-
   font-family: "Trebuchet MS", sans-serif;
   color: #1b5e20;
   font-size: 20px;
   line-height: 1.5;
   font-weight: bold;
-
   backdrop-filter: blur(4px);
 }
 
-/* Optional tropical leaf accent */
 .instructions::before {
   content: "";
   position: absolute;
@@ -111,14 +102,13 @@ html, body {
 }
 
 .theme {
-  margin-bottom: 16px; /* spacing between dropdown and title */
+  margin-bottom: 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  left: 20px; /* adjust position to align with score box */
+  left: 20px;
   bottom: 20px;
-  
 }
 
 .theme label {
@@ -151,7 +141,7 @@ html, body {
 
 .flower {
   position: absolute;
-  left: 550px; /* right outside canvas */
+  left: 550px;
   top: 50px;
   font-size: 48px;
 }
