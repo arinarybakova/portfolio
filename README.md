@@ -1,6 +1,3 @@
-# portfolio
-My portfolio
-
 # **Portfolio Project**
 
 This is a full-stack web application portfolio project built with TypeScript, React (Vite), and Prisma. The project demonstrates modern development practices, including automated testing with Playwright and CI/CD configuration.
