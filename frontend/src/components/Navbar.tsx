@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="bg-green-700 text-white shadow-lg fixed top-0 left-0 w-full z-50">
+    <nav className="bg-purple-700 text-white shadow-lg fixed top-0 left-0 w-full z-50">
       <div className="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
         
         {/* LOGO */}
@@ -43,6 +43,17 @@ export default function Navbar() {
             }
           >
             Profile
+          </NavLink>
+
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `hover:text-green-200 ${
+                isActive ? "font-semibold border-b-2 border-white pb-1" : ""
+              }`
+            }
+          >
+            Log out
           </NavLink>
         </div>
       </div>

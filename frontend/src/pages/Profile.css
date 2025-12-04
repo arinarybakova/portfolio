@@ -1,0 +1,121 @@
+/* === PROFILE CONTAINER === */
+.profile-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+/* === MAIN PROFILE CARD === */
+.profile-card {
+  background: #111;
+  border-radius: 24px;
+  padding: 30px;
+  width: 600px;
+  color: white;
+  box-shadow: 0 0 20px rgba(128, 0, 255, 0.3);
+}
+
+/* Avatar */
+.profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 5px solid #7c3aed;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* Achievements */
+.achievement-box {
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.achievement-box:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.profile-btn {
+  background: #7c3aec;
+  padding: 10px;
+  border-radius: 12px;
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.profile-btn:hover {
+  background: #6d28d9;
+}
+
+/* Modal background */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+
+/* Modal box */
+.modal-box {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 20px;
+  width: 420px;
+}
+
+/* Success/Error popup */
+.alert-popup {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  z-index: 50;
+}
+
+.alert-success {
+  background: #10b981;
+}
+
+.alert-error {
+  background: #ef4444;
+}
+
+.edit-profile-btn {
+  width: 100%;
+  background: #6d28d9;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-align: center;
+  border: none;
+}
+
+.edit-profile-btn:hover {
+  background: #5b21b6;
+}
+
+.profile-page button {
+  background: #6d28d9;
+  color: white;
+}
+
+.profile-page button:hover {
+  background: #5b21b6;
+}
